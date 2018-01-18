@@ -1,0 +1,21 @@
+A web site can be viewed as a directed graph, where pages are vertices and there is an edge from page A to page B if there is a hyperlink on page A that leads to page B.
+Note that a page A can have several direct links to page B -- here we view that the same as if it were only one link. 
+
+Your task is to write two Python scripts:
+
+    One script, given a URL, does a website crawl with depth up to N, and writes some data to a file
+
+    Another script, given the file written by the first script, outputs graph diameter, i.e. the longest distance (in graph edges) between two points in the graph
+    Please output the page URLs and distance (as number).
+
+
+For (1), you may find the scrapy library very useful. We will be testing the script with N=2 and 3.
+
+
+An interesting experiment would be to run the script on a Wikipedia article and see how wide its surroundings span. This, however, requires a bit more complex script for (1): you should ignore links to Wikipedia main page as well as restrict crawl to a single domain (like en.wikipedia.org). If you are adventurous enough to try this, please include the modified script as well.
+
+Диаметр графа -- это максимальное расстояние среди всех возможных пар вершин. Тут "расстояние между вершинами" -- это количество рёбер на кратчайшем пути между этими вершинами (то есть каждое ребро входит с весом 1). 
+ 
+Рисовать ничего не надо, достаточно посчитать расстояние и вывести хотя бы одну пару точек на этом расстоянии. Но надо, чтобы первый скрипт выдавал граф в том виде, в котором его читает второй скрипт :)
+
+Задание можно сделать до вечера воскресенья. Временных ограничений от старта до завершения нет. По результатам заказчик даст комментарий. Если все Ок, назначим интервью по скайпу с Техническим директором компании.

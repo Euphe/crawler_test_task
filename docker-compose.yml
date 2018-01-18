@@ -1,0 +1,9 @@
+version: '3'
+services:
+  crawler:
+    build: .
+    image: crawler_test_task
+    environment:
+      - DEPTH_LIMIT=${DEPTH_LIMIT:-1}
+      - START_URL=${START_URL:-https://euphe.github.io/}
+      - OUT_FILE_PATH=${OUT_FILE_PATH:-result.json}
